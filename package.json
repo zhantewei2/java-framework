@@ -1,0 +1,17 @@
+{
+  "name": "cm-client",
+  "version": "1.0.0",
+  "description": "npm run ",
+  "main": "index.js",
+  "scripts":  {
+    "test": "cd sbin && ./start.sh",
+    "build": "python sbin/py/build.py",
+    "publish": "python sbin/py/publish.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://106.15.88.88/zhan/cas-client.git"
+  },
+  "author": "zhantewei",
+  "license": "ISC"
+}
