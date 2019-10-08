@@ -1,0 +1,14 @@
+server:
+  port: @eureka.port@
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    preferIpAddress: true
+    serviceUrl:
+      defaultZone: http://@eureka.hostname@:@eureka.port@/eureka/
+
+spring:
+  application:
+    name: server-eureka

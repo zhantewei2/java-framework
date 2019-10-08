@@ -9,10 +9,12 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>service1</module>
-        <module>cas-common</module>
+        <module>cm-common</module>
+        <module>service-user</module>
+        <module>server-eureka</module>
+        <module>server-zuul</module>
+        <module>server-config</module>
     </modules>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -21,6 +23,7 @@
     </parent>
 
     <properties>
+        <host.dir>/myTest/cmTool/cm-template/server-spring</host.dir>
         <java.version>1.8</java.version>
         <cas.version>5.3.12</cas.version>
         <spring-dependencies.version>Greenwich.SR1</spring-dependencies.version>
@@ -76,19 +79,19 @@
         </dependency>
 
        <!--mysql-->
-        <!--<dependency>-->
-            <!--<groupId>org.mybatis.spring.boot</groupId>-->
-            <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
-            <!--<version>1.3.2</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
         <!--redis-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
@@ -109,16 +112,12 @@
         </dependencies>
     </dependencyManagement>
 
-
-
-
     <build>
         <filters>
             <filter>
                 ../filters/filter-${package.env}.properties
             </filter>
         </filters>
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

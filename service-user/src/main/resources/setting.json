@@ -1,0 +1,10 @@
+{
+  "AESKey": "cmAESkey",
+  "AESIv": "cmAESIV",
+  "ReqThreadPoolCount": 20,
+  "mongodbHost": "106.13.65.20",
+  "mongodbDatabase": "cm",
+  "mongodbPort": 9808,
+  "mongodbAccount": "cm",
+  "mongodbPwd": "@static.dir@"
+}
